@@ -1,0 +1,31 @@
+name: Aseprite Plugin Config
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps: 
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Create plugin file
+      run: |
+        zip                                           \
+          --recurse-paths                             \
+          ./dungeondraft-effect.aseprite-extension    \
+          README.md                                   \
+          LICENSE                                     \
+          package.json                                \
+          dungeondraft_effect.lua
+
+    - name: Upload plugin
+      uses: actions/upload-artifact@v2
+      with:
+        name: dungeondraft-effect
+        path: dungeondraft-effect.aseprite-extension
