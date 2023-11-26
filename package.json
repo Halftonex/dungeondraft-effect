@@ -1,0 +1,16 @@
+{
+  "name": "Dungeondraft Effect",
+  "displayName": "Dungeondraft Effect",
+  "description": "Apply the default Dungeoncraft assets' jagged outline effect to a sprite",
+  "version": "1.0",
+  "author": { "name": "Halftone" },
+  "contributors": [ ],
+  "publisher": "Halftone",
+  "license": "CC-BY-4.0",
+  "categories": [ "Scripts" ],
+  "contributes": {
+    "scripts": [
+        { "path": "./dungeondraft_effect.lua" }
+    ]
+  }
+}
