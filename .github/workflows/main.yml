@@ -1,4 +1,4 @@
-name: Aseprite Plugin Config
+name: Aseprite Plugin Workflow
 
 on:
   release:
